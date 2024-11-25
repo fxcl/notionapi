@@ -21,7 +21,11 @@ const (
 // Client is client for invoking Notion API
 type Client struct {
 	// AuthToken allows accessing non-public pages.
+	// Deprecated: Use IntegrationSecret instead for Notion API v1
 	AuthToken string
+	// IntegrationSecret is the secret token from an internal integration
+	// created at https://www.notion.so/my-integrations
+	IntegrationSecret string
 	// HTTPClient allows over-riding http.Client
 	HTTPClient *http.Client
 	// Logger is used to log requests and responses for debugging.
@@ -105,7 +109,11 @@ repeatRequest:
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", userAgent)
 	req.Header.Set("Accept-Language", acceptLang)
-	if c.AuthToken != "" {
+
+	// Use IntegrationSecret if available, fallback to AuthToken for backwards compatibility
+	if c.IntegrationSecret != "" {
+		req.Header.Set("Authorization", "Bearer "+c.IntegrationSecret)
+	} else if c.AuthToken != "" {
 		req.Header.Set("cookie", fmt.Sprintf("token_v2=%v", c.AuthToken))
 	}
 	var rsp *http.Response
