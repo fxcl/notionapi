@@ -1,10 +1,10 @@
-module github.com/kjk/notionapi/do
+module github.com/fxcl/notionapi/do
 
 require (
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/kjk/atomicfile v0.0.0-20220410204726-989ae30d2b66 // indirect
 	github.com/kjk/fmthtml v0.0.0-20190816041536-39f5e479d32d
-	github.com/kjk/notionapi v0.0.0-20240430144736-4d4b71e77a72
+	github.com/fxcl/notionapi v0.0.0-20240430144736-4d4b71e77a72
 	github.com/kjk/u v0.0.0-20220410204605-ce4a95db4475
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/minio/md5-simd v1.1.2 // indirect
@@ -13,6 +13,6 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )
 
-replace github.com/kjk/notionapi => ./..
+replace github.com/fxcl/notionapi => ./..
 
 go 1.21

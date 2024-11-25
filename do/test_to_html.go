@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/kjk/fmthtml"
-	"github.com/kjk/notionapi"
-	"github.com/kjk/notionapi/tohtml"
+	"github.com/fxcl/notionapi"
+	"github.com/fxcl/notionapi/tohtml"
 	"github.com/kjk/u"
 )
 

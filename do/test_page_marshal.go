@@ -3,9 +3,9 @@ package main
 import (
 	"bytes"
 
-	"github.com/kjk/notionapi"
-	"github.com/kjk/notionapi/tohtml"
-	"github.com/kjk/notionapi/tomarkdown"
+	"github.com/fxcl/notionapi"
+	"github.com/fxcl/notionapi/tohtml"
+	"github.com/fxcl/notionapi/tomarkdown"
 )
 
 func pageToHTML(page *notionapi.Page) []byte {

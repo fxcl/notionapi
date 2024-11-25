@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/kjk/notionapi"
+	"github.com/fxcl/notionapi"
 	"github.com/kjk/u"
 )
 
